@@ -1,44 +1,57 @@
 body {
-  padding: 50px;
+
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+header {
+background-color: lightgreen;
+width: 100%;
+padding:20px 0px;
+text-align: center;
 
+}
 a {
-  color: #00B7FF;
-  background-color: blue;
+  background-color: lightgreen;
   padding: 10px;
-  margin: 10px;
+  margin-top: 10px;
   text-decoration: none;
   color: white;
-}
-
-h1 {
-
+  display: inline-block;
 }
 
 .post {
-  background-color: lightblue;
+  border: 1px solid grey;
   width: 400px;
   text-align: center;
   padding: 10px;
-  margin: 20px 0;
+  margin:  0 auto;
+  margin-top: 40px;
 }
 
 .comment {
-
+  border: 1px solid grey;
   width: 400px;
-  text-align: left;
+  text-align: center;
   padding: 10px;
-  margin: 10px;
+  margin: auto;
 }
 
-input, label, button {
+input, label, button, textarea {
   display: block;
-  margin-top: 10px;
   font-size: 15px;
   padding: 5px;
+  text-align: center;
+  align-self: center;
+  margin: auto;
+  margin-top: 20px;
 }
 
 div {
   margin: 10px;
+}
+.logo {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  border: black 1px dashed;
 }

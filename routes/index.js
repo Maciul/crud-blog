@@ -7,8 +7,7 @@ router.get('/', function(req, res, next) {
   knex('users')
     .join('post', 'users.id', 'post.users_id')
   .then(function(result) {
-    console.log(result)
-  res.render('index', { result: result });
+  res.render('index', { result: result});
   });
 });
 
@@ -64,8 +63,6 @@ router.get('/:id/comment', function(req, res, next) {
   .leftJoin('users', 'users.id', 'comment.users_id')
   .select('post.id', 'comment.message', 'users.username', 'comment.id as comment_id').where({'post.id': req.params.id})
   .then(function(result) {
-    console.log(result)
-    console.log(result[0].id);
     res.render('comment', {result: result, result1: result[0].id});
   });
 });
