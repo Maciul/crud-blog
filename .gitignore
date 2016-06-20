@@ -38,3 +38,5 @@ jspm_packages
 
 #Environment Variables
 .env
+
+notes.js
