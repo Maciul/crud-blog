@@ -1,15 +1,12 @@
-
-<a href="add">  ADD POST</a></h2>
-
 {{#each result}}
 <div class="post">
 <h2>{{title}}</h2>
-<h3>{{content}}</h3>
+<p>{{content}}</p>
 <small>post by {{username}}</small>
 <br>
-<a href='/{{this.id}}/edit'>Edit Post</a>
-<a href='/{{this.id}}/delete'>Delete Post</a>
-<a href='/{{this.id}}/comment'>Comments</a>
+<a href='/post/{{this.id}}/edit'>Edit Post</a>
+<a href='/post/{{this.id}}/delete'>Delete Post</a>
+<a href='/post/{{this.id}}/comment'>Comments</a>
 </div>
 
 {{/each}}

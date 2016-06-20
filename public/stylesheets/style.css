@@ -1,5 +1,4 @@
 body {
-
   margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -8,8 +7,12 @@ background-color: lightgreen;
 width: 100%;
 padding:20px 0px;
 text-align: center;
-
 }
+
+footer {
+  height: 10px;
+}
+
 a {
   background-color: lightgreen;
   padding: 10px;
