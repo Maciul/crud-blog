@@ -1,2 +1,13 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<h1>Welcome to iComplain </h1> <h2> <a href="add">  ADD POST</a></h2>
+
+{{#each result}}
+<div class="post">
+<h2>{{title}}</h2>
+<h3>{{content}}</h3>
+<small>post by {{username}}</small>
+</div>
+<a href='/{{this.id}}/edit'>Edit Post</a>
+<a href='/{{this.id}}/delete'>Delete Post</a>
+<a href='/{{this.id}}/comment'>Comments</a>
+{{/each}}

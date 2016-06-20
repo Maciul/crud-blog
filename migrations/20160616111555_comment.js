@@ -1,13 +1,13 @@
 
 exports.up = function(knex, Promise) {
-  knex.schema.createTable('comment', function(table) {
+  return knex.schema.createTable('comment', function(table) {
     table.increments();
-    table.text('content');
-    table.integer('post_id').references('post.id');
-    table.integer('user_id').references('user.id');
+    table.text('message');
+    table.integer('post_id').references('post.id').onDelete('CASCADE');
+    table.integer('users_id').references('users.id').onDelete('CASCADE');
   });
 };
 
 exports.down = function(knex, Promise) {
-  knex.schema.dropTable('comment');
+  return knex.schema.dropTable('comment');
 };

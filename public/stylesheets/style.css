@@ -5,4 +5,40 @@ body {
 
 a {
   color: #00B7FF;
+  background-color: blue;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+
+}
+
+.post {
+  background-color: lightblue;
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.comment {
+
+  width: 400px;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+input, label, button {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+div {
+  margin: 10px;
 }

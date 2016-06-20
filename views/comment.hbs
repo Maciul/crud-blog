@@ -1,0 +1,21 @@
+<h1> This is where I add comments </h1>
+
+<!-- This is my list of comments for the post -->
+
+{{#each result}}
+<h1>{{message}}</h1>
+<h2>{{username}}</h2>
+<a href='/{{comment_id}}/delete-comment'>Delete</a>
+{{/each}}
+
+
+<!-- This is where I want to add more comments [SAME PAGE] -->
+
+<form action='/add-comment' method="post">
+  <label for='username'>Username</label>
+  <input type="text" name='username'>
+  <label for='message'>Message</label>
+  <input type="text" name='message'>
+  <input type='number' name='post_id' value='{{result1}}'>
+  <button type="submit">Add Comment</button>
+</form>
