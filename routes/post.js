@@ -29,7 +29,10 @@ router.get('/:id/edit', function(req,res,next) {
 router.post('/:id/edit', function(req, res, next) {
   knex('users').where({id: req.body.users_id}).update({username: req.body.username})
   .then(function() {
-    return knex('post').where({id: req.params.id}).update({title: req.body.title, content: req.body.content});
+    return knex('post').where({id: req.params.id})
+    .update({
+      title: req.body.title,
+      content: req.body.content});
 }).then(function() {
     res.redirect('/');
 }).catch( function(error) {
@@ -54,18 +57,18 @@ router.get('/:id/comment', function(req, res, next) {
 });
 
 router.get('/:id/delete-comment', function(req,res,next) {
-  knex('comment').where({id: req.params.id}).del().then(function () {
+  knex('comment').where({id: req.params.id}).del().then(function() {
     res.redirect('back');
   });
 });
 
 
-router.post('/add-comment', function(req, res, next) {
+router.post('/:id/add-comment', function(req, res, next) {
   knex('users').first().returning('id').insert({username: req.body.username})
   .then(function(userid) {
     return knex('comment').insert({message: req.body.message, post_id: req.body.post_id, users_id: userid[0]});
 }).then(function() {
-    res.redirect('back');
+    res.redirect('/post/'+req.params.id+'/comment');
 }).catch( function(error) {
   });
 });
